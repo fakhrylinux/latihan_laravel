@@ -46,7 +46,7 @@ class LoginController extends Controller
             $this->redirectTo = route('siswa.index');
             return $this->redirectTo;
         } else {
-            $this->redirectTo = route('siswa.index');
+            $this->redirectTo = route('siswa.show', Auth::user()->id);
             return $this->redirectTo;
         }
     }
